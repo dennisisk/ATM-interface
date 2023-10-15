@@ -10,20 +10,20 @@ public class Deposit extends Transaction
 {
    private double amount; // amount to deposit
    private Keypad keypad; // reference to keypad
-   private DepositSlot depositSlot; // reference to deposit slot
+//   private DepositSlot depositSlot; // reference to deposit slot
    private final static int CANCELED = 0; // constant for cancel option
 
    // Deposit constructor
    public Deposit(int userAccountNumber, Screen atmScreen, 
-      BankDatabase atmBankDatabase, Keypad atmKeypad, 
-      DepositSlot atmDepositSlot)
+      BankDatabase atmBankDatabase, Keypad atmKeypad)
+//      DepositSlot atmDepositSlot)
    {
       // initialize superclass variables
       super(userAccountNumber, atmScreen, atmBankDatabase);
 
       // initialize references to keypad and deposit slot
       keypad = atmKeypad;
-      depositSlot = atmDepositSlot;
+//      depositSlot = atmDepositSlot;
    } // end Deposit constructor
 
    // perform transaction
@@ -44,10 +44,10 @@ public class Deposit extends Transaction
          screen.messageJLabel2.setText( "\nPlease insert a deposit envelope containing " + amount);
 
          // receive deposit envelope
-         boolean envelopeReceived = depositSlot.isEnvelopeReceived();
+//         boolean envelopeReceived = depositSlot.isEnvelopeReceived();
 
          // check whether deposit envelope was received
-         if (envelopeReceived)
+         if (true)
          {  
         	 screen.messageJLabel2.setText("\nYour envelope has been " + 
                "received.\nNOTE: The money just deposited will not ");
@@ -100,20 +100,3 @@ public class Deposit extends Transaction
    }
 }
  // end class Deposit
-
-
-
-/**************************************************************************
- * (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
- * Pearson Education, Inc. All Rights Reserved.                           *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
- * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or       *
- * consequential damages in connection with, or arising out of, the       *
- * furnishing, performance, or use of these programs.                     *
- *************************************************************************/

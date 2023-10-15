@@ -18,7 +18,7 @@ public class ATM
    private Screen screen; // ATM's screen
    private Keypad keypad; // ATM's keypad
    private CashDispenser cashDispenser; // ATM's cash dispenser
-   private DepositSlot depositSlot; // ATM's deposit slot
+//   private DepositSlot depositSlot; // ATM's deposit slot
    private BankDatabase bankDatabase; // account information database
    private int AdminCheck;
    private String userinput = "";
@@ -43,7 +43,7 @@ public class ATM
       keypad = new Keypad(); // create keypad 
       
       cashDispenser = new CashDispenser(); // create cash dispenser
-      depositSlot = new DepositSlot(); // create deposit slot
+//      depositSlot = new DepositSlot(); // create deposit slot
       bankDatabase = new BankDatabase(); // create acct info database
    } // end no-argument ATM constructor
 
@@ -272,7 +272,7 @@ public class ATM
          else if(type == 3){ // create new Deposit transaction
         	 screen.setSize( 400, 250 );
             temp = new Deposit(currentAccountNumber, screen, 
-               bankDatabase, keypad, depositSlot);}
+               bankDatabase, keypad);}
        // end switch
 
       return temp; // return the newly created object
@@ -403,20 +403,3 @@ public static ATM getinstance() {
          
 // end i
 // end class ATM
-
-
-
-/**************************************************************************
- * (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
- * Pearson Education, Inc. All Rights Reserved.                           *
- *                                                                        *
- * DISCLAIMER: The authors and publisher of this book have used their     *
- * best efforts in preparing the book. These efforts include the          *
- * development, research, and testing of the theories and programs        *
- * to determine their effectiveness. The authors and publisher make       *
- * no warranty of any kind, expressed or implied, with regard to these    *
- * programs or to the documentation contained in these books. The authors *
- * and publisher shall not be liable in any event for incidental or       *
- * consequential damages in connection with, or arising out of, the       *
- * furnishing, performance, or use of these programs.                     *
- *************************************************************************/
